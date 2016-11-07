@@ -67,6 +67,7 @@ class RegisterController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             return $this->render('register', ['register_info' => $model]);
         }
+
         return $this->render('form', [
             'model' => $model,
         ]);

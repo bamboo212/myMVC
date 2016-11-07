@@ -42,8 +42,9 @@ class Register extends Model
     public function rules()
     {
         return [
-            // name, email, subject and body are required
-            [['firstname', 'email', 'dob', 'Yearsofexperience', 'aboutme', 'gender', 'phone'], 'required'],
+            [['website', 'lastname', 'industry' , 'aboutme' ,'photo', 'title', '$careerLevel', 'comms','org','jobl', 'website'], 'safe'],
+            // These fields do not need to be requied.
+            [['firstname', 'email', 'dob', 'Yearsofexperience', 'aboutme', 'gender', 'phone', 'address'], 'required'],
             // email has to be a valid email address
             ['email', 'email'],
         ];
